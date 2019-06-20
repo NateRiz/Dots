@@ -8,6 +8,8 @@ set expandtab
 set autoindent
 set mouse=a
 set number
+set ignorecase
+set clipboard=unnamedplus
 
 autocmd FileType cpp setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType h setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -26,6 +28,7 @@ autocmd vimenter * NERDTree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+nmap <F9> :NERDTreeToggle<CR>
 
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'Valloric/YouCompleteMe'
@@ -36,6 +39,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'raimondi/delimitmate'
 Plugin 'tpope/vim-surround'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

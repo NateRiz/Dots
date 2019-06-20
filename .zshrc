@@ -16,6 +16,9 @@ ZSH_THEME="dieter"
 # An empty array have no effect
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
+#Call neofetch when the terminal starts.
+neofetch
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -103,4 +106,4 @@ alias docs="documents"
 alias g14="g++ -std=c++14 -Wall"
 alias wifi="nmtui"
 alias bluetooth="bluetoothctl"
-
+alias q="exit"
