@@ -24,11 +24,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'scrooloose/nerdtree'
-autocmd vimenter * NERDTree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-nmap <F9> :NERDTreeToggle<CR>
+nmap <F8> :NERDTreeToggle<CR>
 
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'Valloric/YouCompleteMe'
@@ -38,9 +37,16 @@ Plugin 'morhetz/gruvbox'
 Plugin 'scrooloose/syntastic'
 Plugin 'raimondi/delimitmate'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'derekwyatt/vim-fswitch'
+au! BufEnter *.cpp let b:fswitchdst = 'hpp,h'
+au! BufEnter *.cc let b:fswitchdst = 'hpp,h'
+nmap <F10> :FSHere<CR>
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
-nmap <F8> :TagbarToggle<CR>
+nmap <F9> :TagbarToggle<CR>
+Plugin 'tibabit/vim-templates'
+let tmpl_search_paths = ['~/.vim/templates']
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
