@@ -39,6 +39,7 @@ Plugin 'raimondi/delimitmate'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'derekwyatt/vim-fswitch'
+let b:fswitchlocs = 'rel:../src,source'
 au! BufEnter *.cpp let b:fswitchdst = 'hpp,h'
 au! BufEnter *.cc let b:fswitchdst = 'hpp,h'
 nmap <F10> :FSHere<CR>
