@@ -32,6 +32,7 @@ nmap <F8> :NERDTreeToggle<CR>
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'Valloric/YouCompleteMe'
 let g:ycm_global_ycm_extra_conf = '~/.config/YouCompleteMe/.ycm_extra_conf.py'
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 Plugin 'morhetz/gruvbox'
 Plugin 'scrooloose/syntastic'
